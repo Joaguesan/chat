@@ -69,17 +69,12 @@ public class MainActivity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    TextView textView = findViewById(R.id.textView);
                     String message="";
                     if(args.length>0){
                         message = args[0].toString();
-                        textView.setText(message);
+                        addMessage(message);
                     }
-
-                    // add the message to view
-                    addMessage(message);
                 }
-
                 private void addMessage(String message) {
                     TextView textView = findViewById(R.id.textView);
                     textView.setText(message);
